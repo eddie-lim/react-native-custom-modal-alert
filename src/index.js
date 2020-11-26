@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, TouchableOpacity, Dimensions } from 'react-nati
 import Modal from "react-native-modal";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-export default useCustomDialog = () => { 
+export default useCustomAlert = () => { 
   const id = "custom-dialog";
   
   const [data, setData] = useState({});
@@ -12,7 +12,8 @@ export default useCustomDialog = () => {
 
   const dialogWidth = (Dimensions.get('window').width) * 0.9;
   
-  const showCustomDialog = (data, isVisible = true) => {
+  const showCustomAlert = (data, isVisible = true) => {
+    console.log(data)
     setData(data);
     setVisible(isVisible);
   }
@@ -73,7 +74,7 @@ export default useCustomDialog = () => {
       } else{
         return(
           <View style={{marginTop: 10, marginBottom: 10}}>
-            {data.body()}
+            {data.body}
           </View>
         );
       }
@@ -99,7 +100,7 @@ export default useCustomDialog = () => {
     );
   }
 
-  return { showCustomDialog, renderCustomDialog:render }
+  return { showCustomAlert, renderCustomAlert:render }
 }
 
 const styles = StyleSheet.create({

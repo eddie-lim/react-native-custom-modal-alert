@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native';
-import { DefaultTheme } from 'react-native-paper';
 
 const StyleConstant = {
 
@@ -36,24 +35,9 @@ const StyleConstant = {
   titleSize: 28,
 }
 
-const s = StyleConstant;
-
-const MyTheme = {
-  ...DefaultTheme,
-  roundness: 2,
-  colors: {
-    ...DefaultTheme.colors,
-    primary: s.primary,
-    accent: s.secondary,
-    placeholder: '#dddddd',
-  }
-};
-
 const ShadowStyle = {
   shadowColor: 'rgba(0,0,0,0.4)', shadowOffset: {height: 1, width: 1}, shadowOpacity: 1, shadowRadius: 1, elevation: 2
 };
-
-const TextShadowStyle = { textShadowColor: 'rgba(0,0,0,0.75)', textShadowOffset: {width: 1, height: 1}, textShadowRadius: 5 };
 
 const ShareStyle = StyleSheet.create({
   titleTxt: { fontSize: StyleConstant.titleSize, lineHeight:StyleConstant.titleSize, color: StyleConstant.primaryText,  textAlign: 'center', textAlignVertical: 'center' 
@@ -67,16 +51,7 @@ const ShareStyle = StyleSheet.create({
   txtRegular : { fontFamily: 'SegoeUi' }
 });
 
-const NavOptionStyle = {
-  transparent : {title: null, headerTransparent: true, backgroundColor: 'transparent', headerTintColor: 'white'},
-  default: {
-    headerTitleStyle: { fontFamily: 'SegoeUi-Bold', color: StyleConstant.dark, fontSize: 16},
-    headerTintColor: StyleConstant.dark,
-    headerStyle: { backgroundColor: 'white' }, 
-    headerBackTitle: 'Back'
-  } 
-};
-export { StyleConstant, ShareStyle, MyTheme, ShadowStyle, TextShadowStyle, NavOptionStyle };
+export { StyleConstant, ShareStyle, ShadowStyle };
 
 /*
 
